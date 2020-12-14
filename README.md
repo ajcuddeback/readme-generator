@@ -1,5 +1,8 @@
 ![GitHub](https://img.shields.io/github/license/ajcuddeback/readme-generator)
 ![GitHub top language](https://img.shields.io/github/languages/top/ajcuddeback/readme-generator)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/ajcuddeback/readme-generator)
+![GitHub issues](https://img.shields.io/github/issues/ajcuddeback/readme-generator)
+![YouTube Video Views](https://img.shields.io/youtube/views/TaInk3BLWTI?label=YT%20Views&logo=youtube&logoColor=red&style=flat-square)
 
 # README Generator
 
@@ -24,6 +27,8 @@ In order to install this project you must clone this project on to your local ma
 This project usage is for anyone that needs a high quality README.md file for their own GitHub Project!
 
 ## Instructions
+
+- If you would like to view a video on how to install and use, go to my [Youtube Channel](https://www.youtube.com/watch?v=TaInk3BLWTI&feature=youtu.be)
 
 - Step 1: Clone this repository
 
