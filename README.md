@@ -1,7 +1,7 @@
-# README Generator
-
 ![GitHub](https://img.shields.io/github/license/ajcuddeback/readme-generator)
 ![GitHub top language](https://img.shields.io/github/languages/top/ajcuddeback/readme-generator)
+
+# README Generator
 
 ## Description
 
