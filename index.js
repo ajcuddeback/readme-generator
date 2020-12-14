@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const { truncate, write } = require('fs');
 const inquirer = require('inquirer');
 const { type } = require('os');
