@@ -1,4 +1,6 @@
+const { truncate } = require('fs');
 const inquirer = require('inquirer');
+const { type } = require('os');
 const generateMarkdown = require("./utils/generateMarkdown.js")
 
 // array of questions for user
@@ -63,22 +65,107 @@ const promptQuestions = () => {
                     return false;
                 }
             }
+        },
+        {
+            type: 'list',
+            name: 'license',
+            choices: ['MIT', 'GNU', 'Apache', 'BSD', 'ISC']
+        },
+        {
+            type: 'confirm',
+            name: 'confirmContribute',
+            message: 'Will your project be open to contributions?',
+            default: true
+        },
+        {
+            type: 'input',
+            name: 'contribution',
+            message: 'Please explain your contribution guidlines for this project:',
+            when: ({ confirmContribute }) => {
+                if (confirmContribute) {
+                    return true
+                } else {
+                    return false
+                }
+            }
+        },
+        {
+            type: 'confirm',
+            name: 'confirmTest',
+            message: 'Will your project need testing instructions?',
+            default: true
+        },
+        {
+            type: 'input',
+            name: 'testing',
+            message: 'Please input testing instructions for the user:',
+            when: ({ confirmTest }) => {
+                if (confirmTest) {
+                    return true;
+                } else {
+                    return false
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'githubUsername',
+            message: 'What is your GitHub username?',
+            validate: gitInput => {
+                if (gitInput) {
+                    return true;
+                } else {
+                    console.log('Please enter your GitHub username!');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'gitLink',
+            message: 'Please enter your GitHub Profile Link:',
+            validate: gitLinkInput => {
+                if (gitLinkInput) {
+                    return true;
+                } else {
+                    console.log('Please enter your GitHub Link!');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'Please enter your email adress for people to contact you:',
+            validate: emailInput => {
+                if (emailInput) {
+                    return true;
+                } else {
+                    console.log('Please enter your email adress!');
+                    return false;
+                }
+            }
         }
 
     ])
+        .then(data => {
+            console.log(data)
+        })
 }
 
-// function to write README file
-function writeToFile(fileName, data) {
-}
+promptQuestions()
 
-// function to initialize program
-function init() {
+// // function to write README file
+// function writeToFile(fileName, data) {
+// }
 
-}
+// // function to initialize program
+// function init() {
 
-// function call to initialize program
-init();
+// }
+
+// // function call to initialize program
+// init();
 
 
 
