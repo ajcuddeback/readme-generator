@@ -29,6 +29,22 @@ This project usage is for anyone that needs a high quality README.md file for th
 
 * ![step-1](images/step-1.png)
 
+- Step 2: Run 'node index' in the terminal while in root directory of the cloned project
+
+* ![step-2](images/step-2.png)
+
+- Step 3: Answer the prompts
+
+- Step 4: Once you finish answering the prompts type 'code .' in the terminal
+
+* ![step-4](images/step-4.png)
+
+* Step 5: Navigate to the dist folder
+
+* ![step-5](images/step-5.png)
+
+- Step 6: Your high-quality readme file is located in the dist folder where you can copy it into your project!
+
 ## License
 
 - This application is covered under the MIT license
