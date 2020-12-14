@@ -2,57 +2,48 @@ const generateInstall = installText => {
   if (!installText) {
     return ''
   } else {
-    return `
-    ## Installation
-    ${installText}
-    `
+    return `## Installation
+  ${installText}
+  `
   }
 }
 const generateContribute = contributeText => {
   if (!contributeText) {
     return ''
   } else {
-    return `
-    ## Contributions
-    ${contributeText}
-    `
+    return `## Contributions
+  ${contributeText}
+  `
   }
 }
 const generateTesting = testText => {
   if (!testText) {
     return ''
   } else {
-    return `
-    ## Testing
-    ${testText}
-    `
+    return `## Testing
+  ${testText}
+  `
   }
 }
 const installCheck = check => {
   if (!check) {
     return '';
   } else {
-    return `
-    * [Installation](#installation)
-    `
+    return `* [Installation](#installation)`
   }
 }
 const contributeCheck = check => {
   if (!check) {
     return '';
   } else {
-    return `
-    * [Contributions](#contributions)
-    `
+    return `* [Contributions](#contributions)`
   }
 }
 const testCheck = check => {
   if (!check) {
     return '';
   } else {
-    return `
-    * [Testing](#testing)
-    `
+    return `* [Testing](#testing)`
   }
 }
 

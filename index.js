@@ -1,12 +1,8 @@
-const { truncate } = require('fs');
+const { truncate, write } = require('fs');
 const inquirer = require('inquirer');
 const { type } = require('os');
-const generateMarkdown = require("./utils/generateMarkdown.js")
-
-// array of questions for user
-// const questions = [
-
-// ];
+const generateMarkdown = require("./utils/generateMarkdown.js");
+const writeFile = require('./utils/generateFile.js');
 
 const promptQuestions = () => {
     return inquirer.prompt([
@@ -149,23 +145,20 @@ const promptQuestions = () => {
 
     ])
         .then(data => {
-            generateMarkdown(data);
+            return generateMarkdown(data);
+        })
+        .then(pageMarkdown => {
+            return writeFile(pageMarkdown);
+        })
+        .catch(err => {
+            console.log(err);
         })
 }
+function init() {
+    promptQuestions()
+}
 
-promptQuestions()
-
-// // function to write README file
-// function writeToFile(fileName, data) {
-// }
-
-// // function to initialize program
-// function init() {
-
-// }
-
-// // function call to initialize program
-// init();
+init();
 
 
 
