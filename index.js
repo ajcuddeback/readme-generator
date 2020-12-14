@@ -13,7 +13,7 @@ const promptQuestions = () => {
         {
             type: 'input',
             name: 'title',
-            message: 'What is the name of your project?',
+            message: 'What is the name of your repository?',
             validate: titleInput => {
                 if (titleInput) {
                     return true;
@@ -149,7 +149,7 @@ const promptQuestions = () => {
 
     ])
         .then(data => {
-            console.log(data)
+            generateMarkdown(data);
         })
 }
 
