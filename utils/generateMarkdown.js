@@ -51,7 +51,6 @@ const testCheck = check => {
 
 // function to generate markdown for README
 function generateMarkdown(data) {
-  console.log(data)
   return `
   ![GitHub](https://img.shields.io/github/license/${data.githubUsername}/${data.title})
 
